@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.Text;
+using Core;
 using Moq;
 
 namespace UnitTests.Ping;
