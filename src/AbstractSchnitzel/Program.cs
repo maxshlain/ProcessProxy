@@ -1,12 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+var baseDirectory = System.AppDomain.CurrentDomain.BaseDirectory;
+var msg = $"Base directory: {baseDirectory}";
+Console.WriteLine(msg);
 
-// print full path to current application
-Console.WriteLine("Appcontext BaseDirectory: " 
-                  + System.AppContext.BaseDirectory);
-
-// print working directory
-Console.WriteLine("Working directory: " 
-    + System.IO.Directory.GetCurrentDirectory());
+var executingAssemblyLocation = System.Reflection.Assembly.GetExecutingAssembly().Location;
+var workingDirectory = System.IO.Path.GetDirectoryName(executingAssemblyLocation); 
+msg = $"Working directory: {workingDirectory}";
+Console.WriteLine(msg);
 
 // print all command-line arguments
 Console.WriteLine("Command line arguments:");
